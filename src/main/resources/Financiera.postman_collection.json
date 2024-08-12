@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "63f92e20-255c-48f7-83b4-cecd03c7cdd7",
+		"name": "Financiera",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24490513"
+	},
+	"item": [
+		{
+			"name": "listar clientes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tipoIdentificacion\": \"CC\",\r\n  \"numeroIdentificacion\": \"1121911236\",\r\n  \"nombres\": \"nn\",\r\n  \"apellido\": \"yy\",\r\n  \"correoElectronico\": \"string@hmail.com\",\r\n  \"fechaNacimiento\": \"2000-07-17\",\r\n  \"fechaCreacion\": \"2024-07-17\",\r\n  \"fechaModificacion\": \"2024-07-17\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 2,\r\n  \"tipoIdentificacion\": \"CC\",\r\n  \"numeroIdentificacion\": \"11219174785\",\r\n  \"nombres\": \"Nelson\",\r\n  \"apellido\": \"Ortiz\",\r\n  \"correoElectronico\": \"N9@gmail.com\",\r\n  \"fechaNacimiento\": \"1995-07-18\",\r\n  \"fechaCreacion\": \"2024-07-18\",\r\n  \"fechaModificacion\": \"2024-07-18\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"id\": 8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"tipoCuenta\": \"cuenta corriente\",\r\n  \"numeroCuenta\": \"123456789\",\r\n  \"estado\": \"ACTIVA\",\r\n  \"saldo\": 0,\r\n  \"exentaGMF\": true,\r\n  \"fechaCreacion\": \"2024-07-18\",\r\n  \"fechaModificacion\": \"2024-07-18\",\r\n  \"cliente\": {\r\n    \"id\": 10,\r\n    \"tipoIdentificacion\": \"string\",\r\n    \"numeroIdentificacion\": \"string\",\r\n    \"nombres\": \"string\",\r\n    \"apellido\": \"string\",\r\n    \"correoElectronico\": \"string\",\r\n    \"fechaNacimiento\": \"2024-07-18\",\r\n    \"fechaCreacion\": \"2024-07-18\",\r\n    \"fechaModificacion\": \"2024-07-18\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"id\": 11\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/productos/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"id\": 0,\r\n    \"tipoCuenta\": \"cuenta de ahorros\",\r\n    \"numeroCuenta\": \"456789\",\r\n    \"saldo\": 0,\r\n    \"exentaGMF\": true,\r\n    \"fechaCreacion\": \"2024-07-18\",\r\n    \"fechaModificacion\": \"2024-07-18\",\r\n    \"cliente\": {\r\n      \"id\": 10,\r\n      \"tipoIdentificacion\": \"CC\",\r\n      \"numeroIdentificacion\": \"1121918787\",\r\n      \"nombres\": \"Nelson\",\r\n      \"apellido\": \"Ortiz\",\r\n      \"correoElectronico\": \"N9@gmail.com\",\r\n      \"fechaNacimiento\": \"1995-07-18\",\r\n      \"fechaCreacion\": \"2024-07-16\",\r\n      \"fechaModificacion\": \"2024-07-18\"\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/productos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear transaccion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tipoCuenta\": \"cuenta de ahorros\",\r\n  \"saldo\": 100.00,\r\n  \"numeroCuentaOrigen\": \"5387179109\",\r\n  \"numeroCuentaDestino\": \"5379414432\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transacciones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transacciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar transacciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transacciones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transacciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar transaccion",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transacciones/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transacciones",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar transaccion",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tipoCuenta\": \"cuenta de ahorros\",\r\n  \"saldo\": 200,\r\n  \"numeroCuentaOrigen\": \"string\",\r\n  \"numeroCuentaDestino\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transacciones/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transacciones",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
